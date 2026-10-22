@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Mohamad Rosli."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Mohamad Rosli" />
+<meta name="dc:creator" content="QERE-EMUT-CPHB" />
+<meta name="dc:creator" content="Agnes Simonet" />
+<meta name="dc:creator" content="Agn&#x00E8;s Simonet" />
+<meta name="dc:creator" content="as" />
+<meta name="dc:title" content="Perkakas Dapur 1" />
+
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- JMatchMap_v2.0.3 (for HP v7)
+	 by Agnès Simonet, July 2019
+-->
+
+<title>
+Perkakas Dapur 1
+</title>
+
+<!-- djmatch7.ht_ modified by Agnès Simonet - January 2020
+	HTML5 audio :
+    	* hiddenPlayer added for audio - line 82 in djmatch7.ht_ 
+    	* player3.js loaded - line 40 in djmatch7.ht_
+	"strHeaderCode" moved below "strStyleSheet" - line 36 in djmatch7.ht_ 
+-->
+
+<!-- AS : original place for "strHeaderCode" -->
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+/* added by Agnès Simonet for Jmatch add-ons v2.0.3 (January 2020):
+         css variables (line 57 in hp7.cs_)
+         div.DCardStyle
+         div.DCardStyle_JMSV
+         div.FCardStyle_JMH
+         div.FCardStyle_JMS
+         div.FCardStyle_JMSV
+         div.TitleCardStyle_JMS
+         div.TitleCardStyle_JMSV
+         div.MapStyle_JMM
+         Audio Gloss style for mini audio player
+
+   modified by Agnès Simonet for Jmatch add-ons v2.0.3 (January 2020):
+         body: margin-right: 1%; margin-left: 1%; instead of 5%
+         div.CardStyle (now only used at the very beginning of the display.)
+         split of div.ExerciseContainer and div.ReadingContainer to be able to change the widths via HeaderCode
+         div.StdDiv, div.ExerciseContainer, div.ReadingContainer: border-radius: 0.5rem; added
+         div.NavButtonBar: padding: 0.4em; (instead of 0.2em to avoid the shadow to be out of the div)
+         div.ReadingContainer: max-height: 5000em; added to prevent fontboosting on touchdevices     
+   
+   added by Agnès Simonet for JMM v2.0.3 (18 January 2020)
+         div.DCardStyle_JMM
+*/
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       130%;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000040;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #ebda94;
+	--strVLinkColor:     #d0ccd7;
+	
+	--strNavBarColor:    #ffffff;
+	--strNavLightColor:  #ffffff;
+	--strNavShadeColor:  #7f7f7f;
+	--strNavTextColor:   #000000;
+	
+	
+	--strPageBGColor:    #ffffff;
+	
+	
+	--strExBGColor:      #FFFFFF;
+	
+	
+	/* added by AS */
+	--strBorderWidth_IfDropped: 3px; /* for JMH */
+	--strBorderWidth_IfUnDropped: 1px; /* for JMH,JMM */
+	--strBorderColor_IfUnDropped: silver; /* for JMH, JMM */
+	--strBorderWidth_IfChecked: 3px; /* for JMM */
+	--strAreaBGColor: white;  /*for JMM */
+	--strAreaBorderColor: silver; /* for JMM */
+	--strMapBorderWidth: 5px; /* for JMM */
+	--strMapBorderColor: silver; /* for JMM */
+	--strMapPadding: 50px; /* for JMM */
+	--strCatTitleBGColor: gold; /* for JMS and JMSV */
+	--strCatTitleFontSize: 1.5em; /* for JMS and JMSV */
+	--strCatTitleFontWeight: bold; /* for JMS and JMSV */
+	--strCatBoxBGColor:  #FFFFFF;  /* for JMS and JMSV */
+	--strGlossColor: green;  /*for mini audio button */
+	--strGlossBGColor: gold;  /*for mini audio button */
+	
+	
+}
+
+
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+	background-image: url(bg4.jpg); 
+	margin-right: 1%; /* original : 5% */
+	margin-left: 1%; /* original : 5% */
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+	border-radius: 0.5rem;/*added by AS */
+}
+
+/* AS : modification */
+/* original version :  
+div.ReadingContainer,div.ExerciseContainer{ 
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}*/
+
+div.ReadingContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+	max-height: 5000em;/* to prevent fontboosting on touchdevices */
+}
+
+div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+/*AS : end of modification*/
+
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.4em;/* instead of 0.2em to avoid the shadow of the button to be out of the div */
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.3em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	/* to avoid display of cards before the change of class for L_n and R_n */
+	position: absolute;
+	left: -50px;
+	top: -50px;
+}
+/* AS for JMH, JMS, JMSV
+/* AS modifications: for card styles use of rem instead of em to have the same border-radius and box-shadow for the cards, regardless of the font-size  */
+div.FCardStyle_JMH, div.FCardStyle_JMS, div.FCardStyle_JMSV, div.TitleCardStyle_JMS, div.TitleCardStyle_JMSV, div.FCardStyle_JMM, div.DCardStyle, div.DCardStyle_JMSV, div.DCardStyle_JMM {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2rem 0.3rem 0.2rem var(--strTextColor);/* AS : rem instead of em*/
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.FCardStyle_JMH {
+	border-radius: 0.5rem;/*AS : rem instead of em*/
+	text-align: center;
+	/* for horizontal and vertical alignement
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	flex-direction: column;  /*or : row */
+	*/
+}
+
+div.FCardStyle_JMS {
+	z-index: 60; /*AS : upon TitleCard */
+	border-radius: 0 0 0.5rem 0.5rem;/*AS : rem instead of em*/
+	background-color: var(--strCatBoxBGColor);
+	text-align: center;
+	/* for horizontal and vertical alignement
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	flex-direction: column;  /*or : row */
+	*/
+}
+
+div.TitleCardStyle_JMS {
+	z-index: 50; /*AS : under FCard to mask the bottom box-shadow*/
+	border-radius: 0.5rem 0.5rem 0 0;/*AS : rem instead of em*/
+	background-color: var(--strCatTitleBGColor);
+	font-size: var(--strCatTitleFontSize);
+	font-weight: var(--strCatTitleFontWeight);
+	text-align: center;
+}
+
+div.FCardStyle_JMSV {
+	z-index: 60; /*AS : upon TitleCard */
+	border-radius: 0 0.5rem 0.5rem 0;/*AS : rem instead of em*/
+	background-color: var(--strCatBoxBGColor);
+	text-align: center;
+	/* for vertical alignement
+	display:flex;
+    align-items:center;
+	flex-direction: column;  /*or : row */
+	*/
+}
+
+div.TitleCardStyle_JMSV {
+	z-index: 50; /*AS : under FCard to mask the right box-shadow*/
+	border-radius: 0.5rem 0 0 0.5rem;/*AS : rem instead of em*/
+	background-color: var(--strCatTitleBGColor);
+	font-size: var(--strCatTitleFontSize);
+	font-weight: var(--strCatTitleFontWeight);
+	text-align: center;
+	/* for vertical alignement */
+	display:flex;
+    align-items:center;
+	/*flex-direction: column; */
+	
+}	
+
+div.FCardStyle_JMM {
+	border-width: 1px;
+	border-color: var(--strAreaBorderColor);
+	box-shadow: none;
+	padding: 0em;
+	text-align: center;
+	min-width: 0;
+    background-color: var(--strAreaBGColor);
+}
+	
+div.DCardStyle {
+	z-index: 70; /*AS : for "fixed" cards upon TitleCard and FCard  */
+	border-radius: 0.5rem;/*AS : rem instead of em*/
+	border-color: var(--strBorderColor_IfUnDropped);
+	text-align: center;/**/
+}
+
+div.DCardStyle_JMSV, div.DCardStyle_JMM {
+	z-index: 70; /*AS : for "fixed" cards upon TitleCard and FCard  */
+	border-radius: 0.5rem;/*AS : rem instead of em*/
+	border-color: var(--strBorderColor_IfUnDropped);
+}
+
+/* image JMM*/
+div.MapStyle_JMM {
+	position: absolute;
+	/*z-index: 100;*/
+	box-sizing: border-box;
+	font-family: var(--strFontFace);
+	/*font-family: Verdana,Geneva,Arial,sans-serif;*/
+	font-size: 100%;
+	padding: var(--strMapPadding);
+	border-style: solid;
+	border-width: var(--strMapBorderWidth);
+	border-color: var(--strMapBorderColor);
+	color: #000000;
+	opacity: 1;
+	background-color: #FFFFFF;
+	left: -500px; /* -50px; */
+	top: -500px; /* -50px; */
+	overflow: visible;
+	text-align: center;
+	/* for horizontal and vertical alignement
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	flex-direction: column;  /*or : row */
+	*/
+}
+
+/*unused*/
+div.CardStyleCentered{
+	text-align: center;
+}
+
+/* Audio Gloss style */
+/* for html5 audio mini button (author : Stan Bogdanov ; modified by AS) */
+
+a:link.gloss ,
+a:visited.gloss ,
+a:active.gloss {
+	display: inline-block;
+	font-family: Arial;
+	color: var(--strGlossColor);
+	background-color: var(--strGlossBGColor);
+	
+	cursor:pointer;
+	text-decoration: none;
+	border: 1px solid #777;
+	border-radius: 2em;
+	/*padding: 0.5em 0.9em 0.5em 0.9em; ok for android*/
+	padding: 0.43em 0.5em 0.43em 0.5em; /*ok for pc, font-family : Arial*/
+}
+
+a:hover.gloss {
+	color: var(--strGlossBGColor);
+	background-color: var(--strGlossColor);
+	border: 1px solid #444; 
+}
+
+a:link.gloss ,
+a:visited.gloss ,
+a:active.gloss,
+a:hover.gloss {
+	outline: 0 none;
+}
+
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+<!-- AS : new place for  -->
+
+
+<!-- for audio button -->
+<!-- if player3.js and the htm exercice are in the same folder -->
+<script src="player3.js"></script>
+<!-- end of addition by Agnès Simonet -->
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+//MDH_SCORM modification to support SCORM 1.2 functionality on LMS
+/* JavaScript to find the SCORM API if it is available */
+/* Based on a model at <http://www.claroline.net/doc/en/index.php/How_do_I_create_SCORM_content%3F> */
+
+var API = null; /* SCORM API */
+
+/* look up through the frameset hierarchy for the SCORM API */
+function findAPI(win)
+{
+	while ((win.API == null) && (win.parent != null) && (win.parent != win))
+	{
+		win = win.parent;
+	}
+	API = win.API;
+}
+
+/* initialize the SCORM API */
+function initAPI(win)
+{
+	/* look for the SCORM API up in the frameset */
+	findAPI(win);
+
+	/* if we still have not found the API, look at the opener and its frameset */
+	if ((API == null) && (win.opener != null))
+	{
+		findAPI(win.opener);
+	}
+}
+
+var ScormSubmitted = false; //use this to check whether LMSFinish has been called later.
+
+function ScormStartUp(){
+	initAPI(window);
+	if (API != null){
+		API.LMSInitialize(''); 
+		API.LMSSetValue('cmi.core.lesson_status', 'browsed');
+		API.LMSSetValue('cmi.core.score.min', 0);
+		API.LMSSetValue('cmi.core.score.max', 100);
+		API.LMSCommit('');
+	}
+}
+
+function CheckLMSFinish(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			API.LMSCommit('');
+			API.LMSFinish('');
+			ScormSubmitted = true;
+		}
+	}
+}
+
+function SetScormIncomplete(){
+	if (ScormSubmitted == true){
+		return;
+	}
+	SetScormScore();
+	if (API != null){
+		API.LMSSetValue('cmi.core.lesson_status', 'incomplete');
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSCommit('');
+	}
+}
+
+function SetScormComplete(){
+	if (API != null){
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSSetValue('cmi.core.lesson_status', 'completed');
+		SetScormScore();
+		API.LMSCommit('');
+		API.LMSFinish('');
+		ScormSubmitted = true;
+	}
+}
+
+var ScormStartTime = (new Date()).getTime();
+
+var SuspendData = '';
+
+function SetScormTimedOut(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			SetScormScore();
+			API.LMSSetValue('cmi.core.exit', 'time-out'); 
+			API.LMSCommit('');
+			CheckLMSFinish();
+		}
+	}
+}
+
+//TIME RENDERING FUNCTION
+function MillisecondsToTime(Seconds){
+	Seconds = Math.round(Seconds/1000);
+	var S = Seconds % 60;
+	Seconds -= S;
+	if (S < 10){S = '0' + S;}
+	var M = (Seconds / 60) % 60;
+	if (M < 10){M = '0' + M;}
+	var H = Math.floor(Seconds / 3600);
+	if (H < 10){H = '0' + H;}
+	return H + ':' + M + ':' + S;
+}
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+// pb : si, sans avoir checké,  on resize ou ouvre l'inspecteur avec F12 tous les RI placés sont marqués en vert
+
+//JMATCH-SPECIFIC SCORM-RELATED JAVASCRIPT CODE
+
+//Polyfill for old Safari versions.
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
+function SetScormScore(){
+//Reports the current score and any other information back to the LMS
+	if (API != null){
+		API.LMSSetValue('cmi.core.score.raw', Score);
+		
+		
+//Now send a detailed reports on the item
+		var ItemLabel = 'Matching';
+		API.LMSSetValue('cmi.objectives.0.id', 'obj'+ItemLabel);
+		API.LMSSetValue('cmi.interactions.0.id', 'int'+ItemLabel);	
+		API.LMSSetValue('cmi.objectives.0.status', API.LMSGetValue('cmi.core.lesson_status'));	
+		API.LMSSetValue('cmi.objectives.0.score.min', '0');
+		API.LMSSetValue('cmi.objectives.0.score.max', '100');
+		API.LMSSetValue('cmi.objectives.0.score.raw', Score);
+//We can only use the performance type, because we're storing multiple responses of various types.
+		API.LMSSetValue('cmi.interactions.0.type', 'performance');
+		API.LMSSetValue('cmi.interactions.0.student_response', AnswersTried);
+		
+		API.LMSCommit('');
+	}
+}
+
+
+//JMATCH-SPECIFIC CORE JAVASCRIPT CODE
+
+//Work around Safari bug
+var scrollable = true;
+
+var listener = function(e) {
+    if (! scrollable) {
+        e.preventDefault();
+    }
+}
+
+document.addEventListener('touchmove', listener, { passive:false });
+
+// ***********************************
+// variables
+// ***********************************
+
+// ------------------------------------
+// variables : valeurs modifiables ; you can modify these variable values
+// ------------------------------------
+// entre les cartes d'une colonne
+// between draggable cards
+var spacerV = 5;
+
+// entre les colonnes de cartes mobiles 
+// between lines of draggable cards
+var spacerH_RIC_RIC = 10 ;
+
+// entre image et carte mobile
+// between image and draggable cards
+var spacer_IMG_RIC = 30;
+
+// entre div des boutons et image
+// between checkbuttondiv and the image
+var spacerV_topButtonDiv_IMG = 10;
+
+// alpha pour la couleur quand on drag (permet une transparence)
+// alpha for color when dragging (transparency)
+var alphaDragging = '0.4'; 
+
+// ------------------------------------
+// strUserDefined
+// ------------------------------------
+
+// one 
+//sous la forme transp_LIC*transp_RIC
+var transparency = 'one';
+
+//160%
+// taille des caractères du texte des LIC*RIC
+// fontsize for LIC*RIC text 
+var FontSizes = '160%';
+
+// three : Auto Highlight 
+	// 1 : mode apprentissage (auto coloration) - 0 ou rien : mode test (pas d'auto coloration)
+	// 1 : practice mode (auto highlight) - 0 or void : test mode (no auto highlight)
+var autoHighlight = 'three';
+
+// ------------------------------------
+// variables globales initialisation
+// ------------------------------------
+var CorrectResponse = 'Syabas !<br><font size=6>&#127942</font>';
+var IncorrectResponse = 'Cuba lagi';
+var YourScoreIs = 'Anda mendapat :';
+var FeedbackWidth = 200; //default
+var ExBGColor = getComputedStyle(document.documentElement).getPropertyValue('--strExBGColor');
+var PageBGColor = getComputedStyle(document.documentElement).getPropertyValue('--strPageBGColor');
+var TextColor = getComputedStyle(document.documentElement).getPropertyValue('--strTextColor');
+var TitleColor = getComputedStyle(document.documentElement).getPropertyValue('--strTitleColor');
+var LinkColor = getComputedStyle(document.documentElement).getPropertyValue('--strLinkColor');
+var VLinkColor = getComputedStyle(document.documentElement).getPropertyValue('--strVLinkColor');
+var Penalties = 0;
+var Score = 0;
+var TimeOver = false;
+var Locked = false;
+var ShuffleQs = true;
+var QsToShow = 0;
+var ResizeTimer = null;
+
+var LeftColPos = 100;
+var RightColPos = 500;
+var DragTop = 120;
+var Finished = false;
+var AnswersTried = '';
+
+// image
+var img='';
+var content_imagemap='';
+var img_H = 0;
+var img_W = 0;
+var mapdivleft = -500;
+var mapdivtop = -500;
+var mapdiv_W =0;
+var mapdiv_H =0;
+var borderW_imgdiv = 0;
+var paddingW_imgdiv = 0;
+
+// draggable cards RIC
+// cartes mobiles RIC
+var borderW = 1;
+var borderW_IfChecked = 3;
+var borderC = 'rgb(192,192,192)'; // default value
+var RIC_fontSize = '1em'; 
+var RIC_BkgColorRGBA = 'rgba (255,255,255,1)'; // default value
+var DSOffset = 5;// vertical offset of drop-shadow
+
+// fixed cards (areas) LIC
+// cartes fixes (areas) LIC
+var LIC_fontSize = '1em';
+var LIC_BkgColorRGBA = 'rgba (255,255,255,1)';
+
+
+//Fixed and draggable card arrays
+FC = new Array();
+DC = new Array();
+
+
+// ***********************************
+// drag
+// ***********************************
+var DraggingCard = null;
+/*
+// e.preventDefault() prevents a click on a link (audio button) on touch devices
+// no problem on PC
+var moveFunc = function(e){e.preventDefault(); doDrag(e)};
+var endFunc = function(e){e.preventDefault(); endDrag(e)};
+*/
+var moveFunc = function(e){doDrag(e)};
+var endFunc = function(e){endDrag(e)};
+
+function beginDrag(e, Card){
+	scrollable = false;
+	DraggingCard = Card;
+	DraggingCard.Highlight();
+	window.addEventListener('mousemove',  moveFunc);
+	window.addEventListener('mouseup',    endFunc);
+	window.addEventListener('touchmove',  moveFunc);
+	window.addEventListener('touchend',   endFunc);
+	var currX, currY;
+	if (e.touches){
+		currX = e.touches[0].clientX;
+		currY = e.touches[0].clientY;
+	}
+	else{
+		currX = e.clientX;
+		currY = e.clientY; 
+	}
+
+	topZ++;
+	DraggingCard.style.zIndex = topZ;
+	window.lastX = currX; 
+	window.lastY = currY;
+	return false;  
+} 
+
+
+function doDrag(e) {
+	var currX, currY;
+	var difX, difY;
+	if (e.touches){
+		currX = e.touches[0].clientX;
+		currY = e.touches[0].clientY;
+	}
+	else{
+		currX = e.clientX;
+		currY = e.clientY; 
+	}
+	
+	difX = currX - window.lastX; 
+	difY = currY - window.lastY;
+	DraggingCard.style.left = DraggingCard.GetL() + difX + 'px'; 
+	DraggingCard.style.top  = DraggingCard.GetT() + difY + 'px'; 
+	window.lastX = currX; 
+	window.lastY = currY; 
+	return false;
+} 
+
+function endDrag(e) { 
+DraggingCard.Unhighlight();
+	window.removeEventListener('mousemove', moveFunc);
+	window.removeEventListener('touchmove', moveFunc);
+	window.removeEventListener('mouseup', endFunc);
+	window.removeEventListener('touchend', endFunc);
+	onEndDrag();
+	scrollable = true;	
+	return true;
+} 
+
+function onEndDrag(){ 
+	DraggingOrigPos = parseInt(DraggingCard.getAttribute('id').substring(2));
+	DragEx.HandleDrop(DraggingOrigPos);
+	DraggingCard = null;
+} 
+
+// ***********************************
+// Utility functions for dimensions of elements.
+// ***********************************
+
+var GetL = function(){
+	return this.offsetLeft;
+}
+var GetR = function(){
+	return this.offsetLeft + this.offsetWidth;
+}
+var GetT = function(){
+	return this.offsetTop;
+}
+var GetB = function(){
+	return this.offsetTop + this.offsetHeight;
+}
+var GetH = function(){
+	return this.offsetHeight;
+}
+var GetW = function(){
+	return this.offsetWidth;
+}
+var Highlight = function(){ //only used when dragging
+	this.style.backgroundColor = TextColor; // rgb(rr,gg,bb) though TextColor is #rrggbb
+	this.style.backgroundColor = rgb2rgba(this.style.backgroundColor,alphaDragging);
+	this.style.color = ExBGColor;
+};
+var Unhighlight = function(){
+	this.style.backgroundColor = ExBGColor;
+	this.style.color = TextColor;
+};
+var GetOverlap = function(OtherCard){
+	var smR=(this.GetR() < OtherCard.GetR())? this.GetR(): OtherCard.GetR();
+	var lgL=(this.GetL() > OtherCard.GetL())? this.GetL(): OtherCard.GetL();
+	var HDim=smR-lgL;
+	if (HDim<1){return 0;}
+	var smB=(this.GetB() < OtherCard.GetB())? this.GetB(): OtherCard.GetB();
+	var lgT=(this.GetT() > OtherCard.GetT())? this.GetT(): OtherCard.GetT();
+	var VDim=smB-lgT;
+	if (VDim<1){return 0;}
+	return (HDim*VDim);	
+};
+
+// added by Agnès Simonet
+var SetBorder = function(NewBorderW, NewBorderC){
+	this.style.borderWidth = NewBorderW+'px';
+	this.style.borderColor= NewBorderC;
+};
+var SetOpacity = function(NewValue){ 
+	this.style.opacity=NewValue;
+};
+var SetBkgColorRGBA = function(NewValue){ 
+	this.style.backgroundColor=NewValue;
+};
+// end of addition
+
+/*
+  The new V7 DragEx object replaces the arrays of old.
+*/
+var V7JsonEx = '{  "ShuffleLeftItems": true,  "IsSimple": false,  "ItemsToShow": -1,  "LeftItems": [{"OrigPos": 0,     "Group": 0}, {"OrigPos": 1,     "Group": 1}, {"OrigPos": 2,     "Group": 2}, {"OrigPos": 3,     "Group": 3}, {"OrigPos": 4,     "Group": 4}, {"OrigPos": 5,     "Group": 5}, {"OrigPos": 6,     "Group": 6}, {"OrigPos": 7,     "Group": 7}],  "RightItems": [{"OrigPos": 1,     "Groups": [1], "MatchedWith": -1}, {"OrigPos": 2,     "Groups": [2], "MatchedWith": -1}, {"OrigPos": 3,     "Groups": [3], "MatchedWith": -1}, {"OrigPos": 4,     "Groups": [4], "MatchedWith": -1}, {"OrigPos": 5,     "Groups": [5], "MatchedWith": -1}, {"OrigPos": 6,     "Groups": [6], "MatchedWith": -1}, {"OrigPos": 7,     "Groups": [7], "MatchedWith": -1}]}';
+
+var DragEx = JSON.parse(V7JsonEx);
+
+
+// *************************************
+//       Methods for DragEx.
+// *************************************
+// LI (LeftItems) : fixed items (areas)
+// RI (RightItems) : draggable items 
+
+//----------------------
+//     setup
+//----------------------
+
+DragEx.Setup = function(){
+	var i;
+	
+
+	ScormStartUp();
+
+
+
+
+
+	PreloadImages('tamanpermainan.jpg');
+
+
+// AS : mini audio button
+// transformation of the audio tag with data-audio="mini"
+// into <a href="javascript:void(0);" onclick="play('mysound.mp3');"class="gloss">&#9658;</a>
+// for compatibility with the old syntax (HP v6)
+
+	var audioels = document.querySelectorAll('audio');
+	for (i = 0; i<audioels.length; i++){
+		var audioel = audioels[i];
+		// rechercher le data-audio
+		if ( audioel.hasAttribute('data-audio')) {
+			// récupérer le nom du fichier audio
+			var sourcel = audioel.firstElementChild;// si personne n'a idée de modifier l'audio tag...
+			if(sourcel.nodeName ="source" || "SOURCE") {var srcfilename =sourcel.getAttribute('src');}
+			// definition du remplaçant
+			var lien = document.createElement("a");
+			lien.setAttribute("href","javascript:void(0);");
+			lien.setAttribute("class","gloss");
+			lien.innerHTML = "&#9658;";
+			lien.setAttribute("onclick","play('"+srcfilename+"');");
+			// remplacement
+			var audioparent = audioel.parentNode;
+			audioparent.replaceChild(lien, audioel);
+		}	
+	}
+	
+//Add custom functions to all the cards.
+	document.querySelectorAll('div.CardStyle').forEach(function(div){
+		div.Highlight = Highlight.bind(div);
+		div.Unhighlight = Unhighlight.bind(div);
+		// added by Agnès Simonet
+		div.SetBorder = SetBorder.bind(div);
+		div.SetOpacity = SetOpacity.bind(div);
+		div.SetBkgColorRGBA = SetBkgColorRGBA.bind(div);
+		// end of addition
+		div.GetL = GetL.bind(div);
+		div.GetT = GetT.bind(div);
+		div.GetR = GetR.bind(div);
+		div.GetB = GetB.bind(div);
+		div.GetH = GetH.bind(div);
+		div.GetW = GetW.bind(div);
+		div.GetOverlap = GetOverlap.bind(div);
+	}.bind(this));
+	
+//Connect each of the items to its card.
+	this.LeftItems.forEach(function(LI){
+		LI.Card = document.getElementById('L_' + LI.OrigPos);
+	}.bind(this));
+	this.RightItems.forEach(function(RI){
+		RI.Card = document.getElementById('R_' + RI.OrigPos);
+		RI.Card.addEventListener('mousedown',  (function(e){beginDrag(e, this)}.bind(RI.Card)));
+		RI.Card.addEventListener('touchstart', (function(e){beginDrag(e, this)}.bind(RI.Card)));
+		RI.Card.style.cursor = 'grab';
+	}.bind(this));
+	
+// AS : change LI.Card class
+	this.LeftItems.forEach(function(LI){
+		LI.Card = document.getElementById('L_' + LI.OrigPos);
+		LI.Card.className = 'FCardStyle_JMM';
+	}.bind(this));
+	
+// AS : change RI.Card class
+	this.RightItems.forEach(function(RI){
+		RI.Card = document.getElementById('R_' + RI.OrigPos);
+		RI.Card.className = 'DCardStyle_JMM';
+	}.bind(this));
+	
+// récupération de la chaine d'imagemap
+	content_imagemap = this.LeftItems[0].Card.innerHTML;
+	
+// suppression de LI[0] et RI[0]
+			LI0_OP = this.LeftItems[0].OrigPos;
+			this.LeftItems[0].Card.parentNode.removeChild(this.LeftItems[0].Card);
+			this.LeftItems.splice(0, 1);
+			// normalement il n'y a pas de div R_0 mais on ne sait jamais
+			if (this.RightItems[0].OrigPos == LI0_OP){
+				this.RightItems[0].Card.parentNode.removeChild(this.RightItems[0].Card);
+				this.RightItems.splice(0, 1);
+			}
+	
+//Reduce the items as required. Sanity check: don't allow less than 2.
+	if (this.ItemsToShow > 1){
+		while (this.LeftItems.length > this.ItemsToShow){
+			RemItem = Math.floor(this.LeftItems.length*Math.random());
+			OP = this.LeftItems[RemItem].OrigPos;
+			this.LeftItems[RemItem].Card.parentNode.removeChild(this.LeftItems[RemItem].Card);
+			this.LeftItems.splice([RemItem], 1);
+
+//Having removed an item from the left, we must remove the corresponding 
+//one from the right if it exists. (There may not be a matching item if 
+//the one removed was a distractor.)
+			for (i = 0; i < this.RightItems.length; i++){
+				if (this.RightItems[i].OrigPos == OP){
+					this.RightItems[i].Card.parentNode.removeChild(this.RightItems[i].Card);
+					this.RightItems.splice(i, 1);
+				}
+			}
+		}
+	}
+
+// AS :Récupération des coordonnées du centre des areas
+	this.LeftItems.forEach(function(LI){
+			LI.LI_Center=[]; // coordonnées relatives du centre de l'area
+	}.bind(this));
+	
+	for (j=0; j<(this.LeftItems.length); j++) {
+		var content_area = this.LeftItems[j].Card.innerHTML;
+		idx = 0;
+		var coords='';
+		var alt='';
+		coords_array = [];
+		var shape="";
+		var shape_id=0;
+		// recup de la forme (circle ou rect)
+		idx=content_area.search(/shape/i);
+		shape=content_area.slice(idx);
+		idx=shape.search(/\"/);
+		shape=shape.slice(idx+1);
+		idx=shape.search(/\"/);
+		shape=shape.slice(0,idx);
+		idx=shape.search(/rect/i);
+		if (idx!== -1) {shape="rect";}
+		idx=content_area.search(/circle/i);
+		if (idx!== -1) {shape="circle";}
+		//récup de la chaine de nombres
+		idx=content_area.search(/coords/i);
+		coords=content_area.slice(idx); //chaine coords="................	
+		idx=coords.search(/\"/);
+		coords=coords.slice(idx+1); // chaine : 463,191,475,203" alt......
+		idx=coords.search(/\"/);
+		coords=coords.slice(0,idx);// chaine : 463,191,475,203 avec espaces
+		//supprimer les espaces
+		coords = SupprSpaces(coords);
+		//recup des nombres dans un tableau
+		coords_array=coords.split(/,/);
+		// position du centre de l'area
+		var area_X_centre =0;
+		var area_Y_centre =0;
+		if (shape=="circle") 
+		{ 
+			area_X_centre=parseInt(coords_array[0]);
+			area_Y_centre=parseInt(coords_array[1]);
+		}
+		if (shape=="rect") 
+		{ 
+			area_X_centre=( parseInt(coords_array[0]) +parseInt(coords_array[2]) )/2;
+			area_Y_centre=( parseInt(coords_array[1]) +parseInt(coords_array[3]) )/2;	
+		}
+		this.LeftItems[j].LI_Center[0] = area_X_centre;
+		this.LeftItems[j].LI_Center[1] = area_Y_centre;
+	}
+		
+// AS : Récupération de la chaine html pour l'image (img)
+	var idx = 0;
+	var str_end ='';
+	var img_end ='';
+	
+	idx = content_imagemap.search(/<img/i);
+	img=content_imagemap.slice(idx);
+	idx = img.search(">");
+	img=img.slice(0,idx); //chaine img non close
+	// fin de la chaine selon qu'elle se termine par > ou />
+	img_end = img.substr(idx-3,idx);// -3 : pour tenir compte d'1 ou 2 espaces qui traîneraient
+	var idx_slash=	img_end.search(/\//);
+	if (idx_slash !== -1) {
+		idx = idx-3+idx_slash;
+		img=img.slice(0,idx);
+	}
+	str_end = ' />';
+	img = img.concat(str_end);
+
+// AS : Récupération des width et height de l'image (img_H et img_W)
+	idx = img.search(/height/i);
+	img_H=img.slice(idx);
+	idx = img_H.search(/\"/);
+	img_H=img_H.slice(idx+1);
+	idx=img_H.search(/\"/);
+	img_H=img_H.slice(0,idx);
+	img_H=SupprSpaces(img_H);
+	img_H = parseInt(img_H);
+	
+	idx = img.search(/width/i);
+	img_W=img.slice(idx);
+	idx = img_W.search(/\"/);
+	img_W=img_W.slice(idx+1);
+	idx=img_W.search(/\"/);
+	img_W=img_W.slice(0,idx);
+	img_W=SupprSpaces(img_W);
+	img_W = parseInt(img_W);
+	
+// AS : Récupération des transparences définies dans one
+	var Separator =/\*/g; //*
+	var transp = transparency.split(Separator);
+	// recup des 2 valeurs + verifications
+	var transp_LIC = parseFloat(transp[0]); 
+	if(isNaN(transp_LIC)){transp_LIC=1}
+	if (transp_LIC>1){transp_LIC=1;}
+	var transp_RIC = parseFloat(transp[1]);
+	if(isNaN(transp_RIC)){transp_RIC=1}
+	if (transp_RIC>1){transp_RIC=1;}
+
+// AS : Récupération des tailles de caractères définies dans 160%
+	var Separator =/\*/g; //*
+	var fontSize = FontSizes.split(Separator);
+	LIC_fontSize = fontSize[0]
+	RIC_fontSize = fontSize[1]; 
+
+// AS : Récupération et transformations des données de hp7.cs_
+		// pour LIC
+	var elLIC = document.querySelector('div.FCardStyle_JMM');
+	var LIC_bkgcolor = window.getComputedStyle(elLIC).getPropertyValue("background-color");// rgb(rrr, ggg, bbb)
+	LIC_BkgColorRGBA = rgb2rgba(LIC_bkgcolor,transp_LIC);//rgba(rrr, ggg, bbb,transp)
+		// pour RIC
+	var elRIC = document.querySelector('div.DCardStyle_JMM');	
+	var RIC_bkgcolor = window.getComputedStyle(elRIC).getPropertyValue("background-color");// rgb(rrr, ggg, bbb)
+	RIC_BkgColorRGBA =rgb2rgba(RIC_bkgcolor,transp_RIC);//rgba(rrr, ggg, bbb,transp)
+	borderC = window.getComputedStyle(elRIC).getPropertyValue("border-left-color");
+	borderW = getComputedStyle(document.documentElement).getPropertyValue('--strBorderWidth_IfUnDropped');
+		if (borderW.lastIndexOf('px') != -1) {
+			borderW = parseFloat( borderW.slice(0,borderW.lastIndexOf('px')) );
+			}
+		else {borderW = 1;}
+	borderW_IfChecked = getComputedStyle(document.documentElement).getPropertyValue('--strBorderWidth_IfChecked');
+		if (borderW_IfChecked.lastIndexOf('px') != -1) {
+			borderW_IfChecked = parseFloat( borderW_IfChecked.slice(0,borderW_IfChecked.lastIndexOf('px')) );
+			}
+		else {borderW_IfChecked = 3;}
+		// pour l'image
+	var elImg = document.querySelector('div.MapStyle_JMM');
+	paddingW_imgdiv = window.getComputedStyle(elImg).getPropertyValue("padding-left");
+	paddingW_imgdiv = paddingW_imgdiv.slice(0,paddingW_imgdiv.search("px"));
+	paddingW_imgdiv = parseFloat(paddingW_imgdiv);
+	borderW_imgdiv =window.getComputedStyle(elImg).getPropertyValue("border-left-width");
+	borderW_imgdiv = borderW_imgdiv.slice(0,borderW_imgdiv.search("px"));
+	borderW_imgdiv = parseFloat(borderW_imgdiv);
+
+		
+// AS : Get the value of any drop-shadow on the LI and RI cards so we can allow for it in layout.
+// supposing drop-shadow is the same for LI and RI
+	var elRIC = document.querySelector('div.DCardStyle_JMM');
+	var DS =  window.getComputedStyle(elRIC).getPropertyValue("box-shadow");// rgb(0, 0, 102) 16,32,3.2,0px
+	DS = DS.split(')');// sépare la donnée de couleur des données en px : rgb(0, 0, 102, 16px 32px 3.2px 0px
+	if (DS.length > 1) {DS = DS[1].split('px ');}//16, 32, 3.2, 0px
+	if ((DS.length > 1)&&(!(Number.isNaN(parseFloat(DS[0]))))){
+		DSOffsetH = Math.abs(Math.ceil(parseFloat(DS[0])));
+	}
+	if ((DS.length > 1)&&(!(Number.isNaN(parseFloat(DS[1]))))){
+		DSOffsetV = Math.abs(Math.ceil(parseFloat(DS[1])));
+	}
+
+//Now do any shuffling that's required.
+	if (this.ShuffleLeftItems == true){ //inutile pour JMM
+		this.LeftItems = Shuffle(this.LeftItems);
+	}
+	this.RightItems = Shuffle(this.RightItems);
+	
+//Fix to avoid image dragging problem in cards with images.
+	var DragImgs = document.querySelectorAll('div.DCardStyle_JMM img');
+	for (i = 0; i<DragImgs.length; i++){
+		DragImgs[i]. onmousedown = function(){return false;}
+	}
+
+//AS: Fix to avoid dragging problem in cards with audio link.
+	var DragAudioLink = document.querySelectorAll('div.DCardStyle_JMM a');
+	for (i = 0; i<DragAudioLink.length; i++){
+		DragAudioLink[i]. onmousedown = function(){return false;}
+	}
+
+// position LIC, RIC including "fix" cards	
+	this.SetInitialPositions(true);
+
+//We use a timeout here to allow card positions to be established
+//before they're used for sliding matched cards.
+// for resize or check
+	window.addEventListener('resize', function(e){
+		clearTimeout(ResizeTimer);
+		ResizeTimer = setTimeout(function(){DragEx.SetInitialPositions(false)}, 250);
+	});
+
+	
+};
+//----------------------
+// fin de Setup
+//----------------------
+
+//----------------------
+// GetLeftItemByOrigPos
+//----------------------
+DragEx.GetLeftItemByOrigPos = function(Pos){
+	for (var i=0; i<this.LeftItems.length; i++){
+		if (this.LeftItems[i].OrigPos === Pos){
+			return this.LeftItems[i];
+		}
+	}
+	return null;
+};
+
+//----------------------
+//GetRightItemByOrigPos
+//----------------------
+DragEx.GetRightItemByOrigPos = function(Pos){
+	for (i=0; i<this.RightItems.length; i++){
+		if (this.RightItems[i].OrigPos === Pos){
+			return this.RightItems[i];
+		}
+	}
+	return null;
+};
+
+//----------
+// SendHome
+//----------
+DragEx.SendHome = function(ROrigPos){
+	Slide(ROrigPos, this.GetRightItemByOrigPos(ROrigPos).Home);
+};
+
+//--------------------
+// SetInitialPositions
+//--------------------
+DragEx.SetInitialPositions = function(slide){
+	var i=0, j=0, k=0;
+	var ExDiv = document.querySelector('div.ExerciseContainer');
+	
+	//Calculate container dimensions and positions
+	DragTop = parseInt(document.getElementById('CheckButtonDiv').offsetHeight) + parseInt(document.getElementById('CheckButtonDiv').offsetTop) + + spacerV_topButtonDiv_IMG;;
+	
+	var ExDivLeft = ExDiv.offsetLeft;
+	var ExDivWidth = ExDiv.offsetWidth;	
+	LeftColPos = ExDivLeft;
+	var CurrItem = this.LeftItems[0];
+	var CurrCard = this.LeftItems[0].Card;
+	var CurrTop = DragTop;
+	var CurrLeft = LeftColPos;
+	
+	// Affichage de l'image
+	mapdivleft= LeftColPos;
+	mapdivtop = DragTop;
+	Aff_img();	
+	mapdiv_W = img_W +2*(borderW_imgdiv + paddingW_imgdiv);
+	mapdiv_H = img_H +2*(borderW_imgdiv + paddingW_imgdiv);
+
+	// Affichage des right items sur plusieurs colonnes.
+	var Cols_maxR = Aff_RIC(this.RightItems) // positionnement à gauche et recup de la  position droite max
+		//  Centrage horizontal de l'image si possible
+		if ( (LeftColPos + ExDivWidth - Cols_maxR) > (ExDivWidth - mapdiv_W)/2) {
+			mapdivleft=LeftColPos+(ExDivWidth - mapdiv_W)/2;
+			Aff_img();
+			Cols_maxR = Aff_RIC(this.RightItems);
+		}
+		// stock of the initial positions
+		for (i=0; i<this.RightItems.length; i++)
+		{
+			this.RightItems[i].Home = [this.RightItems[i].Card.GetL(), this.RightItems[i].Card.GetT()];
+		}
+
+	// Affichage des left items (areas)
+	for (i=0; i<this.LeftItems.length; i++) {
+		CurrentItem = this.LeftItems[i];
+		CurrCard = CurrentItem.Card; 
+		CurrCard.style.fontSize = LIC_fontSize;
+		CurrCard.style.backgroundColor = LIC_BkgColorRGBA;
+		CurrCard.innerHTML = '?';
+		var LIC_H = CurrCard.GetH();
+		var LIC_W = CurrCard.GetH();//square
+		CurrCard.style.width = LIC_W +'px';
+		CurrCard.style.height = LIC_H+'px';
+		CurrCard.style.left = mapdivleft + 1*(borderW_imgdiv + paddingW_imgdiv) + (CurrentItem.LI_Center[0] - LIC_W/2)+'px';
+		CurrCard.style.top = mapdivtop + 1*(borderW_imgdiv + paddingW_imgdiv) + (CurrentItem.LI_Center[1] - LIC_H/2) +'px';
+	}
+	
+	//Now we clone the top navbar to create a bottom	
+	//navbar, and position it.
+	var TopNav = document.getElementById('TopNavBar');
+	var ReadingDiv = document.getElementById('ReadingDiv');
+	
+	if (TopNav !== null){
+		//First delete one if there is one.
+		var BottomNav = document.getElementById('BottomNavBar');
+		if (BottomNav === null){
+			BottomNav = document.getElementById('TopNavBar').cloneNode(true);
+			BottomNav.setAttribute('id', 'BottomNavBar');
+			BottomNav.style.position = 'absolute';
+			document.body.appendChild(BottomNav);
+		}
+		var LowestLeft = mapdivtop + mapdiv_H;
+		var LowestRight = this.RightItems[this.RightItems.length - 1].Card.GetB();
+		var ReadingBottom = (ReadingDiv)? ReadingDiv.offsetTop + ReadingDiv.offsetHeight : 0;
+		BottomNav.style.top = (Math.max(ReadingBottom, LowestLeft, LowestRight) + 10) + 'px' ;
+		BottomNav.style.width = document.getElementById('TopNavBar').offsetWidth + 'px';
+	}
+	
+	//Now slide any already-matched items into position.
+	this.RightItems.forEach(function(RI){
+		if (RI.MatchedWith > -1){
+			var TargPoint = this.GetDockPoint(RI.MatchedWith, RI.Card);
+			if (slide == true){ //début : slide des fix
+				var TargPoint = this.GetDockPoint(RI.MatchedWith, RI.Card);
+				Slide(RI.OrigPos, TargPoint);
+				this.GetLeftItemByOrigPos(RI.MatchedWith).Card.SetOpacity(0);
+			}
+			else{ // après resize ou check
+				RI.Card.style.left = TargPoint[0] + 'px';
+				RI.Card.style.top  = TargPoint[1] + 'px';
+			  //AutoHighlightRIC(RI);
+				DragEx.GetLeftItemByOrigPos(RI.MatchedWith).Card.SetOpacity(0);
+				
+			}
+		}
+	}.bind(this));
+	
+
+};
+//--------------------
+// End of SetInitialPositions
+//--------------------	
+
+//-------------
+// GetDockPoint
+// modified by Agnès Simonet for JMM
+//-------------
+
+DragEx.GetDockPoint = function(LeftOrigPos, RightCard){
+	var TargL, TargT;
+	var LeftItem = this.GetLeftItemByOrigPos(LeftOrigPos);
+	if (LeftItem !== null){
+		var LeftCard = LeftItem.Card;
+		TargL = LeftCard.GetL() + Math.floor((LeftCard.GetW() - RightCard.GetW()) / 2);
+		TargT = LeftCard.GetT() + Math.floor((LeftCard.GetH() - RightCard.GetH()) / 2);
+		return [TargL, TargT];
+	}
+	else{
+		return [0,0];
+	}
+}
+
+//-------------
+// HandleDrop
+//-------------
+DragEx.HandleDrop = function(ROrigPos){
+	
+	var RI = this.GetRightItemByOrigPos(ROrigPos);
+	
+	// si RI vient d'un autre LI remettre l'opacité d'origine de LI
+	if(RI.MatchedWith > -1){
+		this.GetLeftItemByOrigPos(RI.MatchedWith).Card.SetOpacity(1);
+	}
+	
+	RI.MarkedWrong = false;
+	RI.MatchedWith = -1;
+	RI.Card.SetBorder(borderW, borderC);
+	RI.Card.style.backgroundColor = RIC_BkgColorRGBA; 
+	var Overlap = 0;
+	var MatchedWith = -1;
+	var i;
+	this.LeftItems.forEach(function(LI){ //: OrigPos du LI est le plus overlappé
+		var OL = RI.Card.GetOverlap(LI.Card);
+		// Check whether it overlaps a card, or is in exact docking position with it.
+		// donc reste où il est si on clique dessus sans qu'on le déplace (permet un clic audio)
+		var DP = this.GetDockPoint(LI.OrigPos, RI.Card);
+		if ((OL > Overlap)||((RI.Card.GetL() == DP[0])&&(RI.Card.GetT() == DP[1]))){
+			Overlap = OL;
+			MatchedWith = LI.OrigPos;
+		}
+	}.bind(this));
+	if (MatchedWith > -1){ // si droppé sur un LI
+		RI.MatchedWith = MatchedWith;
+		// le placer
+		TargPoint = this.GetDockPoint(MatchedWith, RI.Card);
+		Slide(ROrigPos, TargPoint);
+	  	this.GetLeftItemByOrigPos(MatchedWith).Card.SetOpacity(0);
+		// renvoi d'une carte RIC qui se trouverait là
+		this.RightItems.forEach(function(RI2){ 
+			if ((RI2.OrigPos !== RI.OrigPos)&&(RI2.MatchedWith == MatchedWith)){
+				RI2.MatchedWith = -1;
+				RI2.Card.SetBorder(borderW, borderC); 
+				this.SendHome(RI2.OrigPos);
+				RI2.MarkedWrong = false;
+				
+			}
+		}.bind(this));
+	}
+	else{ // si non droppé sur un LI ou cliqué et déplacé
+		this.SendHome(ROrigPos);
+		
+	}
+}
+
+//-------------
+// CheckAnswers
+//-------------
+DragEx.CheckAnswers = function(){
+
+//This function checks answers and calculates the 
+//current score, then returns true for "finished" or
+//false for "not yet finished". The object's Score
+//property can then be read.
+/*
+	Check each right item to see whether a) it had an 
+	original match on the left, and b) it is matched
+	to a left item whose group is one of its groups.
+*/
+	if (!this.hasOwnProperty('Penalties')){
+		this.Penalties = 0;
+	}
+	var ItemsToCount = 0;
+	var CorrectItems = 0;
+	var Done = true; //Assume till proven otherwise.
+	
+//Tot up the scores.
+	this.RightItems.forEach(function(RI){
+//Only use it if there is a match for it.
+		if (this.GetLeftItemByOrigPos(RI.OrigPos) !== null){// not a RI distractor
+			ItemsToCount++;
+			if (RI.MatchedWith !== -1){
+				var LI = this.GetLeftItemByOrigPos(RI.MatchedWith);
+				if (RI.Groups.indexOf(LI.Group) > -1){ //correct
+					CorrectItems++;
+					RI.Card.SetBorder(borderW_IfChecked,LinkColor);
+				}
+				else{ //incorrect
+					Done = false;
+					RI.Card.SetBorder(borderW_IfChecked,VLinkColor);
+					RI.MarkedWrong = true;
+				}
+			}
+			else{
+				Done = false;
+			}
+		}
+		else{ //It's a distractor and shouldn't be matched. Deduct one from score.
+			if (RI.MatchedWith !== -1){
+				Done = false;
+				RI.Card.SetBorder(borderW_IfChecked,VLinkColor);
+				RI.MarkedWrong = true;
+				CorrectItems--;
+			}
+			else {
+				RI.Card.SetBorder(borderW_IfChecked,LinkColor);	
+			}
+		}
+	}.bind(this));
+	
+	if (!this.hasOwnProperty('Score')){
+		this.Score = 0;
+	}
+	this.Score = Math.round((100*(CorrectItems - this.Penalties))/ItemsToCount);
+	if (Done === false){
+		this.Penalties++;
+	}
+	return Done;
+};
+
+// *************************************
+//     End of methods for the object
+// *************************************
+
+// *************************************
+//               Functions
+// *************************************
+//-------------
+//function Slide
+//-------------
+function Slide(ROrigPos, TargPoint){
+	var CurrentRightItem = DragEx.GetRightItemByOrigPos(ROrigPos);
+	var Card = DragEx.GetRightItemByOrigPos(ROrigPos).Card;
+	if (Math.abs(Card.GetL() - TargPoint[0]) <= 5){
+		Card.style.left = TargPoint[0] + 'px';
+		if (autoHighlight == '1' ){	AutoHighlightRIC(CurrentRightItem);}
+	}
+	else{
+		var LeftShift = Card.GetL() < TargPoint[0]? 5: -5;
+		Card.style.left = Card.GetL() + LeftShift + 'px';
+	}
+	if (Card.GetT() !== TargPoint[1]){
+		if (Math.abs(Card.GetT() - TargPoint[1]) <= 5){
+			Card.style.top = TargPoint[1] + 'px';
+		}
+		else{
+			var TopShift = Card.GetT() < TargPoint[1]? 5: -5;
+			Card.style.top = Card.GetT() + TopShift + 'px';
+		}
+	}
+	if ((Card.GetL() != TargPoint[0])||(Card.GetT() != TargPoint[1])){
+		setTimeout('Slide(' + ROrigPos + ', [' + TargPoint[0] + ',' + TargPoint[1] + '])', 10);
+	}
+	else {	 // s'il est en place
+		if (autoHighlight == '1' ){	AutoHighlightRIC(CurrentRightItem);}
+		
+	}
+}
+//-------------
+//function TimerStartUp
+//-------------
+function TimerStartUp(){
+	setTimeout('DragEx.Setup()', 300);
+}
+
+//-------------
+//function CheckAnswers
+//-------------
+function CheckAnswers(){
+	if (Locked == true){return;}
+	
+	var Feedback = '';
+
+	var AllDone = DragEx.CheckAnswers();
+	Score = DragEx.Score;
+	if (Score < 0){Score = 0;}
+
+	if (AllDone == true){
+		Feedback = YourScoreIs + ' ' + Score + '%.<br/>' + CorrectResponse;
+	}
+	else {
+		if (TimeOver == true){
+			Feedback = YourScoreIs + ' ' + Score + '%.'
+		}
+		else{
+			Feedback = YourScoreIs + ' ' + Score + '%.' + '<br />' + IncorrectResponse;
+		}
+	}
+	ShowMessage(Feedback);
+	
+//If the exercise is over, deal with that
+	if ((AllDone == true)||(TimeOver == true)){
+
+
+		TimeOver = true;
+		Locked = true;
+		Finished = true;
+		WriteToInstructions(Feedback);
+	}
+
+	if (AllDone == true){
+		SetScormComplete();
+	}
+	else{
+		SetScormIncomplete();
+	}
+
+	
+//The window layout may be affected by the feedback, so 
+//put the cards in place again.
+	DragEx.SetInitialPositions(false);
+}
+
+
+// *************************************
+//   Functions added by Agnès Simonet
+// *************************************
+function SupprSpaces(InString){
+// fonction similaire à celle présente dans hp6utilities.js_
+// mais supprime les espaces dans la chaine au lieu de réduire les doubles espaces en simple espace
+        var x = 0;
+
+        if (InString.length != 0) {
+        		//supprime les espaces, caractères de fin de ligne etc en fin de chaine
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+        		//supprime les espaces, caractères de fin de ligne etc en début de chaine
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+        		//supprime les espaces à l'intérieur de la chaîne
+                while (InString.indexOf(' ') != -1) {
+                        x = InString.indexOf(' ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+                return InString;
+        }
+        else {
+                return '';
+        }
+}
+
+function GetStyleClass_nopx (elclass, propCSS) {
+// pour récupérer la valeur numérique sans l'unité px
+//ex. : GetStyleClass_nopx ('div.FCardStyle', 'border-left-width')
+// retour ex.: 15
+	var el = document.querySelector(elclass);
+	var strPropValue = window.getComputedStyle(el).getPropertyValue(propCSS); //
+	strPropValue = strPropValue.slice(0,strPropValue.search("px"));
+	strPropValue = parseFloat(strPropValue);
+	return strPropValue;
+}
+
+function rgb2rgba(string_rgb,alpha){
+// add alpha transparency to rgb(rr,gg,bb)
+	if(string_rgb.indexOf('rgba') == -1){
+		var string_rgba=string_rgb.replace(/rgb/i, "rgba");
+		var str_alpha="";
+		var str_alpha = str_alpha.concat(", ",alpha,")");
+		string_rgba=string_rgba.replace(/\)/i,str_alpha);
+	}
+	else {string_rgba=string_rgb;}
+	return string_rgba;
+}
+
+function AutoHighlightRIC(RI)
+// added by Agnès Simonet
+{
+		if (DragEx.GetLeftItemByOrigPos(RI.OrigPos) !== null) // not a distractor
+		{
+			if (RI.MatchedWith !== -1){ // si RIC est droppé
+				var LI = DragEx.GetLeftItemByOrigPos(RI.MatchedWith);// sur quel LIC
+				if (RI.Groups.indexOf(LI.Group) > -1){ // correct
+					RI.Card.SetBorder(borderW_IfChecked,LinkColor);
+				}
+				else{ // incorrect
+					RI.Card.SetBorder(borderW_IfChecked,VLinkColor);
+				}
+			}
+		}
+		else{
+		//It's a distractor
+			if (RI.MatchedWith !== -1){// si RIC distractor est droppé
+				RI.Card.SetBorder(borderW_IfChecked,VLinkColor);
+			}
+		}	
+}
+
+
+function Aff_img()
+{	// remplissage du div avec l'image
+	var mapdiv=document.getElementById("imagemap");
+	mapdiv.innerHTML=img;
+	mapdiv.style.left=mapdivleft+'px';
+	mapdiv.style.top=mapdivtop+'px';
+}
+
+
+function Aff_RIC(RI) {
+	var WidestRICinCol = 0;
+	var TopCol = DragTop;
+	var LeftCol = mapdivleft + mapdiv_W + spacer_IMG_RIC;
+	var stockedBorderW ='';
+	var CurrCard = RI[0].Card;
+	var m=0;
+	for (m=0; m<RI.length; m++){
+		CurrCard = RI[m].Card;
+	
+		// stockage de la largeur de la bordure des RIC
+		if ( CurrCard.style.borderWidth != (borderW_IfChecked+'px') ) {CurrCard.style.borderWidth=(borderW+'px');}
+		stockedBorderW = CurrCard.style.borderWidth;
+		// valeur provisoire de border-width pour un calcul correct de l'espacement vertical entre les RIC
+		// sinon décalage vertical des items vers le bas quand un RIC checké revient au bercail du fait de la difference de largeur de bordure
+		CurrCard.style.borderWidth = borderW_IfChecked+'px';
+		
+		//la plus large de la colonne
+		if(CurrCard.GetW() > WidestRICinCol) {WidestRICinCol = CurrCard.GetW();} 
+		// sur plusieurs colonnes
+		if ( (TopCol + CurrCard.GetH() + DSOffsetV )>= (mapdivtop +mapdiv_H) ) { 
+			TopCol = DragTop;
+			LeftCol = LeftCol +WidestRICinCol + DSOffsetH + spacerH_RIC_RIC;// colonne suivante
+			WidestRICinCol = 0;
+		}
+		CurrCard.style.fontSize = RIC_fontSize;
+		CurrCard.style.backgroundColor = RIC_BkgColorRGBA;
+		CurrCard.style.top = TopCol + 'px';
+		CurrCard.style.left = LeftCol + 'px';
+		TopCol = TopCol + CurrCard.GetH() + DSOffsetV + spacerV; // carte suivante
+		CurrCard.style.borderWidth = stockedBorderW; // remise en place de la bordure d'origine
+		
+	}
+	// position droite des RIC de la dernière colonne
+	var RIC_maxR = LeftCol + WidestRICinCol;
+	return(RIC_maxR);
+}
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+</head> 
+
+<body onload="TimerStartUp()" id="TheBody" onunload="CheckLMSFinish()"> 
+<!-- BeginTopNavButtons -->
+
+<!-- added by Agnès Simonet -->
+<!-- Stan Bogdanov - Hiding the audio button player  -->
+		<div id="hiddenPlayer" style="height:0px;"></div>
+<!-- end of addition by Agnès Simonet -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Perkakas Dapur 1</h2>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+	
+
+	<div class="ExerciseContainer JMatchDrag">
+		<div class="StdDiv" id="CheckButtonDiv">
+		<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;&#x221A;&#160;</button>
+		</div>
+		
+		 <div id="imagemap" class="MapStyle_JMM"></div>
+	</div>
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+	<div class="FeedbackText" id="FeedbackContent"></div>
+	<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;Teruskan&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+<div id="L_0" class="CardStyle"><img src="tamanpermainan.jpg" width="589" height="395" border="0" usemap="#map" /><br /><map name="map"><br /><!-- #$-:Image map file created by GIMP Image Map plug-in --><br /><!-- #$-:GIMP Image Map plug-in by Maurits Rijk --><br /><!-- #$-:Please do not edit lines starting with "#$" --><br /><!-- #$VERSION:2.3 --><br /><!-- #$AUTHOR:AS --><br /><br /></map></div>
+<div id="L_1" class="CardStyle"><area shape="circle" coords="293,19,10" nohref="nohref" /></div>
+<div id="L_2" class="CardStyle"><area shape="circle" coords="388,217,10" nohref="nohref" /></div>
+<div id="L_3" class="CardStyle"><area shape="circle" coords="527,286,10" nohref="nohref" /></div>
+<div id="L_4" class="CardStyle"><area shape="circle" coords="357,360,10" nohref="nohref" /></div>
+<div id="L_5" class="CardStyle"><area shape="circle" coords="227,314,10" nohref="nohref" /></div>
+<div id="L_6" class="CardStyle"><area shape="circle" coords="69,373,10" nohref="nohref" /></div>
+<div id="L_7" class="CardStyle"> <area shape="circle" coords="82,190,10" nohref="nohref" /></div>
+
+
+
+
+
+<div id="R_1" class="CardStyle"> <b>Taman Permainan</b></div>
+<div id="R_2" class="CardStyle"> bangku</div>
+<div id="R_3" class="CardStyle"> buaian</div>
+<div id="R_4" class="CardStyle"> enjut-enjut</div>
+<div id="R_5" class="CardStyle">jongkang-jongket</div>
+<div id="R_6" class="CardStyle"> gelongsor</div>
+<div id="R_7" class="CardStyle"> palang gayut</div>
+
+
+
+
+
+
+</body>
+</html>
